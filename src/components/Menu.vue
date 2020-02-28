@@ -1,7 +1,6 @@
 <template>
   <main>
-    <Menu></Menu>
-    <v-navigation-drawer v-model="drawer" app clipped>
+    <v-navigation-drawer v-model="showMenu" app clipped>
       <v-list dense>
         <v-list-item link>
           <v-list-item-action>
@@ -26,11 +25,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Getter } from 'vuex-class';
+import Component from 'vue-class-component';
+import { namespace as displayNamespace } from '../store/display/index';
 
-export default Vue.extend({
-  name: 'Menu',
-  data: () => ({
-    //
-  }),
-});
+@Component
+export default class Menu extends Vue {
+  @Getter('showMenu', { namespace: displayNamespace })
+  private showMenu?: boolean;
+}
 </script>

@@ -1,63 +1,34 @@
 <template>
   <v-app id="app">
-    <v-app-bar app clipped-left>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
-    <v-content>
-      <v-container class="fill-height" fluid>
-        <v-row align="center" justify="center">
-          <v-col class="shrink">
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn :href="source" icon large target="_blank" v-on="on">
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  icon
-                  large
-                  href="https://codepen.io/johnjleider/pen/bXNzZL"
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-codepen</v-icon>
-                </v-btn>
-              </template>
-              <span>Codepen</span>
-            </v-tooltip>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-content>
-    <v-footer app>
-      <span>&copy; {{year}}</span>
-    </v-footer>
+    <Menu></Menu>
+    <Header></Header>
+    <Content></Content>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Menu from './components/Menu.vue';
+import Header from './components/Header.vue';
+import Content from './components/Content.vue';
+import Footer from './components/Footer.vue';
+import Component from 'vue-class-component';
 
-export default Vue.extend({
-  name: 'App',
+@Component({
   props: {
-    source: String
+    source: String,
   },
   components: {
-    Menu
+    Menu,
+    Header,
+    Content,
+    Footer,
   },
-  data: () => ({
-    drawer: null,
-    year: new Date().getFullYear()
-  }),
-  created() {
+})
+export default class App extends Vue {
+  private created() {
     this.$vuetify.theme.dark = true;
   }
-});
+}
 </script>
