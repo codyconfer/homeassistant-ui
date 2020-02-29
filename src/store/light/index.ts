@@ -2,17 +2,15 @@ import { Module } from 'vuex';
 import { getters } from './getters';
 import { actions } from './actions';
 import { mutations } from './mutations';
-import { ServiceState } from './types';
+import { LightState } from './types';
 import { AppState } from '../types';
 
-export const state: ServiceState = {
-  hasRunning: false,
-};
+export const state: LightState = {};
 
 const namespaced: boolean = true;
-export const namespace = 'service';
+export const namespace = 'light';
 
-export const service: Module<ServiceState, AppState> = {
+export const light: Module<LightState, AppState> = {
   namespaced,
   state,
   getters,
