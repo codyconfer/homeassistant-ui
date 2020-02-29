@@ -4,7 +4,7 @@ import { DisplayState } from './types';
 
 export const getters: GetterTree<DisplayState, AppState> = {
   showMenu(state): boolean {
-    const { Menu } = state;
-    return Menu.showMenu;
+    const { menu } = state;
+    return menu.showMenu;
   },
 };

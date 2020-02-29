@@ -1,6 +1,6 @@
 import { ActionTree } from 'vuex';
 import axios from 'axios';
 import { AppState } from '../types';
-import { HomeState } from './types';
+import { LightState } from './types';
 
-export const actions: ActionTree<HomeState, AppState> = {};
+export const actions: ActionTree<LightState, AppState> = {};

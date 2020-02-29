@@ -1,8 +1,8 @@
 <template>
-  <v-app id="app">
+  <v-app>
     <Menu></Menu>
     <Header></Header>
-    <Content></Content>
+    <router-view></router-view>
     <Footer></Footer>
   </v-app>
 </template>
@@ -11,7 +11,6 @@
 import Vue from 'vue';
 import Menu from './components/Menu.vue';
 import Header from './components/Header.vue';
-import Content from './components/Content.vue';
 import Footer from './components/Footer.vue';
 import Component from 'vue-class-component';
 
@@ -22,7 +21,6 @@ import Component from 'vue-class-component';
   components: {
     Menu,
     Header,
-    Content,
     Footer,
   },
 })

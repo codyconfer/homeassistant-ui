@@ -6,7 +6,7 @@ import { DisplayState } from './types';
 import { AppState } from '../types';
 
 export const state: DisplayState = {
-  Menu: { showMenu: false },
+  menu: { showMenu: false, menuItems: [] },
 };
 
 const namespaced: boolean = true;
