@@ -1,6 +1,6 @@
 <template>
-  <v-footer app>
-    <span>&copy; {{ year }}</span>
+  <v-footer app flat>
+    <span>&copy; Cody Confer {{ year }}</span>
   </v-footer>
 </template>
 
@@ -15,3 +15,10 @@ export default class Footer extends Vue {
   }
 }
 </script>
+
+<style lang="sass">
+.v-application
+  footer
+    display: grid
+    text-align: right
+</style>

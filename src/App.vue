@@ -30,3 +30,8 @@ export default class App extends Vue {
   }
 }
 </script>
+
+<style lang="sass">
+a
+  text-decoration: none
+</style>

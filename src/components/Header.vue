@@ -1,7 +1,9 @@
 <template>
-  <v-app-bar app clipped-left>
+  <v-app-bar app clipped-left flat>
     <v-app-bar-nav-icon @click.stop="toggleMenu" />
-    <v-toolbar-title>Application</v-toolbar-title>
+    <v-toolbar-title>
+      <router-link to="/">Application</router-link>
+    </v-toolbar-title>
   </v-app-bar>
 </template>
 
@@ -17,3 +19,11 @@ export default class Header extends Vue {
   private toggleMenu: any;
 }
 </script>
+
+<style lang="sass">
+.v-application
+  header
+    display: grid
+    a
+      color: #eee
+</style>
