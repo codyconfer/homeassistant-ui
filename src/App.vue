@@ -32,6 +32,13 @@ export default class App extends Vue {
 </script>
 
 <style lang="sass">
+$is-mobile: "only screen and (max-width : 900px)"
+$is-tablet: "only screen and (max-width : 1350px)"
+$is-desktop: "only screen and (min-width : 1350px)"
+
+.container
+  padding: 0
+
 a
   text-decoration: none
 </style>

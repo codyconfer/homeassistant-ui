@@ -13,7 +13,10 @@ import Vue from 'vue';
 import { Getter } from 'vuex-class';
 import Component from 'vue-class-component';
 import RoomWidgetSimple from './RoomWidgetSimple.vue';
+import { WidgetTypes } from './widgetTypes';
 import { namespace as displayNamespace } from '../../store/display/index';
+
+export const Type = WidgetTypes.Room;
 
 @Component({
   components: {
