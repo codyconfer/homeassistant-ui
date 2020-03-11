@@ -16,7 +16,7 @@ export default class Footer extends Vue {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .v-application
   footer
     display: grid

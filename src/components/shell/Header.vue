@@ -11,7 +11,7 @@
 import Vue from 'vue';
 import { Action } from 'vuex-class';
 import Component from 'vue-class-component';
-import { namespace as displayNamespace } from '../store/display/index';
+import { namespace as displayNamespace } from '../../store/display/index';
 
 @Component
 export default class Header extends Vue {
@@ -20,7 +20,7 @@ export default class Header extends Vue {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .v-application
   header
     display: grid

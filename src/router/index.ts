@@ -1,9 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import LightEdit from '../views/LightEdit.vue';
-import Panel from '../views/Panel.vue';
-import PanelEdit from '../views/PanelEdit.vue';
-import SceneEdit from '../views/SceneEdit.vue';
+import PanelContainer from '../views/PanelContainer.vue';
 
 Vue.use(VueRouter);
 
@@ -11,27 +8,12 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Panel,
-  },
-  {
-    path: '/light/edit',
-    name: 'LightEdit',
-    component: LightEdit,
+    component: PanelContainer,
   },
   {
     path: '/panel',
     name: 'Panel',
-    component: Panel,
-  },
-  {
-    path: '/panel/edit',
-    name: 'PanelEdit',
-    component: PanelEdit,
-  },
-  {
-    path: '/scene/edit',
-    name: 'SceneEdit',
-    component: SceneEdit,
+    component: PanelContainer,
   },
 ];
 
