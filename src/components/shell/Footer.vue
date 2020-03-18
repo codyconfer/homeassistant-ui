@@ -1,6 +1,6 @@
 <template>
   <v-footer app flat>
-    <span>&copy; Cody Confer {{ year }}</span>
+    <span>&copy; {{ year }}</span>
   </v-footer>
 </template>
 
