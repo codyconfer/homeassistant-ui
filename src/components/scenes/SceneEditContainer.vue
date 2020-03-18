@@ -81,9 +81,7 @@ $is-desktop: "only screen and (min-width : 1350px)"
     padding: 0 12px
 
 .scene-content
-  padding: 100px 0
   @media #{$is-mobile}
-    padding: 100px 0
-    min-height: 93vh
-    height: 100%
+    min-height: 95vh
+    padding: 100px 0 50px 0
 </style>
