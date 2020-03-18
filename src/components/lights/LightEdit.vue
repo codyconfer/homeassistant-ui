@@ -51,7 +51,7 @@ export default class LightEdit extends Vue {
       title: 'Lights Edit',
       entityId: 'lights.colorlamp',
       brightness: 55,
-      color: '#34343434',
+      color: '#343434',
       isOn: true,
     };
   }

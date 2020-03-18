@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import PanelContainer from '../views/PanelContainer.vue';
+import SceneView from '../views/SceneView.vue';
 
 Vue.use(VueRouter);
 
@@ -8,12 +8,12 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: PanelContainer,
+    component: SceneView,
   },
   {
-    path: '/panel',
-    name: 'Panel',
-    component: PanelContainer,
+    path: '/scene',
+    name: 'Scene',
+    component: SceneView,
   },
 ];
 

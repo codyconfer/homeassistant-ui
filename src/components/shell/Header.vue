@@ -24,6 +24,7 @@ export default class Header extends Vue {
 .v-application
   header
     display: grid
+    z-index: 20
     a
       color: #eee
 </style>

@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
 import { AppState } from './types';
 import { display } from './display/index';
-import { light } from './light/index';
+import { light } from './lights/index';
+import { scene } from './scenes/index';
 
 Vue.use(Vuex);
 
@@ -14,6 +15,7 @@ const store: StoreOptions<AppState> = {
   modules: {
     display,
     light,
+    scene,
   },
 };
 

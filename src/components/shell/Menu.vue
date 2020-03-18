@@ -1,6 +1,6 @@
 <template>
   <section class="nav-drawer">
-    <v-navigation-drawer v-model="showMenu" app clipped flat>
+    <v-navigation-drawer :value="showMenu" app clipped flat>
       <v-list dense>
         <v-list-item @click.stop="toggleMenu" link>
           <v-list-item-action>
@@ -73,5 +73,5 @@ export default class Menu extends Vue {
 
 <style lang="sass">
 .nav-drawer
-  z-index: 1000000
+  z-index: 30
 </style>

@@ -9,6 +9,11 @@ export interface Menu {
   menuItems?: MenuItem[];
 }
 
+export interface SubMenu {
+  showSubMenu: boolean;
+}
+
 export interface DisplayState {
   menu: Menu;
+  subMenu: SubMenu;
 }
