@@ -7,12 +7,6 @@
     <v-card class="section-form wrapper">
       <v-col align="center" justify="center">
         <v-row class="form-field" align="center" justify="center">
-          <v-label>Entity</v-label>
-        </v-row>
-        <v-row class="form-field" align="center" justify="center">
-          <v-autocomplete class="entity"></v-autocomplete>
-        </v-row>
-        <v-row class="form-field" align="center" justify="center">
           <v-label>Brightness</v-label>
         </v-row>
         <v-row class="form-field" align="center" justify="center">
@@ -92,9 +86,4 @@ $is-mobile: "only screen and (max-width : 900px)"
   margin: 5px 0
   @media #{$is-mobile}
     font-size: 0.7rem
-
-.form-field
-  .v-input
-    padding-top: 0
-    margin-top: 0
 </style>
