@@ -1,0 +1,45 @@
+{
+  "home": {
+    "id": "0",
+    "name": "Home",
+    "config": {
+      "color": "cyan"
+    },
+    "rooms": [
+      {
+        "id": "0",
+        "name": "Living Room",
+        "config": {
+          "color": "lime"
+        }
+      },
+      {
+        "id": "1",
+        "name": "Bedroom",
+        "config": {
+          "color": "purple"
+        }
+      }
+    ]
+  },
+  "display": {
+    "menu": {
+      "showMenu": false,
+      "menuItems": [
+        {
+          "to": "/",
+          "label": "Home",
+          "icon": "mdi-view-dashboard"
+        },
+        {
+          "to": "/room",
+          "label": "Room",
+          "icon": "mdi-view-dashboard"
+        }
+      ]
+    }
+  },
+  "service": {
+    "hasRunning": false
+  }
+}

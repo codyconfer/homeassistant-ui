@@ -7,4 +7,7 @@ export const actions: ActionTree<DisplayState, AppState> = {
   toggleMenu({ commit }): any {
     commit('toggleMenu');
   },
+  toggleSubMenu({ commit }): any {
+    commit('toggleSubMenu');
+  },
 };

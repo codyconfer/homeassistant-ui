@@ -7,4 +7,8 @@ export const getters: GetterTree<DisplayState, AppState> = {
     const { menu } = state;
     return menu.showMenu;
   },
+  showSubMenu(state): boolean {
+    const { subMenu } = state;
+    return subMenu.showSubMenu;
+  },
 };

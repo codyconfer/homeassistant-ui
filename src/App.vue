@@ -9,9 +9,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Menu from './components/Menu.vue';
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+import Menu from './components/shell/Menu.vue';
+import Header from './components/shell/Header.vue';
+import Footer from './components/shell/Footer.vue';
 import Component from 'vue-class-component';
 
 @Component({
@@ -30,3 +30,12 @@ export default class App extends Vue {
   }
 }
 </script>
+
+<style lang="sass">
+$is-mobile: "only screen and (max-width : 900px)"
+$is-tablet: "only screen and (max-width : 1350px)"
+$is-desktop: "only screen and (min-width : 1350px)"
+
+a
+  text-decoration: none
+</style>
