@@ -1,16 +1,17 @@
 <template>
   <v-container class="fill-height scene-container" fluid>
     <v-col
-      class="scene fill-height"
+      class="scene-col"
       v-for="section in scene.sections"
       :key="section.name + 'container'"
       align="center"
       justify="center"
     >
       <v-row
-        class="fill-height scene-content"
+        class="scene fill-height scene-content"
         align="center"
         justify="center"
+        v-if="section.active"
         :ref="section.ref"
       >
         <component :is="section.component"></component>
@@ -44,20 +45,25 @@ const SceneEditContainerProps = Vue.extend({
 export default class SceneEditContainer extends SceneEditContainerProps {
   private mounted() {
     this.$root.$on(SceneNavEvents.navTo, (ref: string) => {
-      this.scrollMeTo(ref);
+      this.activateSection(ref);
     });
   }
 
-  private scrollMeTo(ref: string) {
-    const element: any = this.$refs[ref];
-    const top = element[0].offsetTop;
-    window.scrollTo(0, top);
+  private activateSection(ref: string): void {
+    this.scene.sections.forEach((section) => {
+      if (section.ref === ref) {
+        section.active = true;
+      } else {
+        section.active = false;
+      }
+    });
   }
 }
 </script>
 
 <style lang="sass" scoped>
-$is-mobile: "only screen and (max-width : 900px)"
+$is-mobile: "only screen and (max-width : 900px) and (orientation: portrait)"
+$is-mobile-landscape: "only screen and (max-width : 900px) and (orientation: landscape)"
 $is-tablet: "only screen and (max-width : 1350px)"
 $is-desktop: "only screen and (min-width : 1350px)"
 
@@ -65,18 +71,16 @@ $is-desktop: "only screen and (min-width : 1350px)"
   display: grid
   grid-auto-flow: column
   grid-template-columns: auto
+  z-index: 0
   @media #{$is-mobile}
     grid-auto-flow: row
     grid-template-rows: auto
-    padding: 0 12px
 
-.scene
-  @media #{$is-mobile}
-    height: 100%
-    min-height: 810px
-    margin: 15px 0
+.scene-col
+  padding: 2px 12px
 
 .scene-content
   @media #{$is-mobile}
-    min-height: 100vh
+    min-height: 93vh
+    height: 100%
 </style>

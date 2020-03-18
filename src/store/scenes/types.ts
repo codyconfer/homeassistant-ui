@@ -3,6 +3,7 @@ export interface Section {
   name: string;
   component: string;
   ref: string;
+  active: boolean;
 }
 
 export interface Scene {
