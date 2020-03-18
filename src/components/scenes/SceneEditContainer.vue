@@ -62,7 +62,7 @@ export default class SceneEditContainer extends SceneEditContainerProps {
 </script>
 
 <style lang="sass" scoped>
-$is-mobile: "only screen and (max-width : 900px) and (orientation: portrait)"
+$is-mobile: "only screen and (max-width : 900px)"
 $is-mobile-landscape: "only screen and (max-width : 900px) and (orientation: landscape)"
 $is-tablet: "only screen and (max-width : 1350px)"
 $is-desktop: "only screen and (min-width : 1350px)"
@@ -77,10 +77,13 @@ $is-desktop: "only screen and (min-width : 1350px)"
     grid-template-rows: auto
 
 .scene-col
-  padding: 2px 12px
+  @media #{$is-mobile}
+    padding: 0 12px
 
 .scene-content
+  padding: 100px 0
   @media #{$is-mobile}
+    padding: 100px 0
     min-height: 93vh
     height: 100%
 </style>
