@@ -50,7 +50,7 @@ export default class SceneEditContainer extends SceneEditContainerProps {
 
   private scrollMeTo(ref: string) {
     const element: any = this.$refs[ref];
-    const top = element[0].offsetTop - 30;
+    const top = element[0].offsetTop;
     window.scrollTo(0, top);
   }
 }
@@ -73,7 +73,7 @@ $is-desktop: "only screen and (min-width : 1350px)"
 .scene
   @media #{$is-mobile}
     height: 100%
-    min-height: 750px
+    min-height: 810px
     margin: 15px 0
 
 .scene-content
