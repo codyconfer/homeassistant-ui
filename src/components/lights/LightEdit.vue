@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row class="section-header wrapper" align="center" justify="center">
       <h1 class="title">{{ title }}</h1>
-      <v-switch v-model="isOn"></v-switch>
+      <v-switch class="light-switch" v-model="isOn"></v-switch>
     </v-row>
     <v-card class="section-form wrapper">
       <v-col align="center" justify="center">
@@ -61,10 +61,6 @@ export default class LightEdit extends Vue {
 <style lang="sass" scoped>
 $is-mobile: "only screen and (max-width : 900px)"
 
-// #lights-colorlamp
-//   @media #{$is-mobile}
-//     margin-top: 7vh
-
 .container
   width: 100%
   padding: 0
@@ -82,23 +78,23 @@ $is-mobile: "only screen and (max-width : 900px)"
   justify-content: left
   grid-template-columns: 1fr auto
 
-// .section-form
-//   justify-content: center
-//   grid-template-rows: 5vh 6vh 7vh 5vh 5vh 40vh 8vh
-
-// .brightness, .entity
-//   align-content: center
-
-// .btn-group
-//   display: grid
-//   grid-template-columns: auto auto auto
-//   grid-column-gap: 8vw
+.btn-group
+  display: grid
+  grid-template-columns: auto auto auto
+  grid-column-gap: 4vw
+  margin-top: 20px
 
 .title
   @media #{$is-mobile}
     font-size: 0.7rem
 
 .v-label
+  margin: 5px 0
   @media #{$is-mobile}
     font-size: 0.7rem
+
+.form-field
+  .v-input
+    padding-top: 0
+    margin-top: 0
 </style>
